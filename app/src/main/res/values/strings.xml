@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">72 Horas Mant</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <array name="tents_name">
+        <item>Paz</item>
+        <item>Amor</item>
+        <item>Misericórdia</item>
+        <item>Perdão</item>
+        <item>Cura</item>
+        <item>No Tenda</item>
+    </array>
+</resources>

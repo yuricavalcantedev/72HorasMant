@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.heavendevelopment.a72horasmant.AdicionarPessoaFragment">
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Nome"
+                app:met_floatingLabel="highlight" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_name"
+                android:layout_margin="10dp"
+                android:hint="Nascimento"
+                android:inputType="date"
+                app:met_floatingLabel="highlight" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_cellNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_birth"
+                android:layout_margin="10dp"
+                android:hint="Número"
+                android:inputType="number"
+                app:met_floatingLabel="highlight" />
+
+
+            <TextView
+                android:id="@+id/tv_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/et_cellNumber"
+                android:layout_below="@+id/et_cellNumber"
+                android:text="Sexo:" />
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_genre"
+                android:layout_below="@+id/tv_genre"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="Homem" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rb_male"
+                android:layout_alignEnd="@+id/et_cellNumber"
+                android:text="Mulher" />
+
+            <TextView
+                android:id="@+id/tv_tent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/rb_male"
+                android:layout_below="@+id/rb_male"
+                android:layout_marginTop="14dp"
+                android:text="Tenda:" />
+
+            <Spinner
+                android:id="@+id/spinner_tents"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignEnd="@+id/rb_female"
+                android:layout_alignStart="@+id/tv_tent"
+                android:layout_below="@+id/tv_tent"
+                android:layout_marginTop="10dp"
+                android:entries="@array/tents_name" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_prayer_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_tents"
+                android:layout_margin="10dp"
+                android:hint="Pedido de Oração"
+                android:minLines="3"
+                app:met_floatingLabel="highlight" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/et_prayer_request"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="13dp"
+                android:clickable="true"
+                app:backgroundTint="@color/colorAccent"
+                app:fabSize="normal"
+                app:srcCompat="@android:drawable/ic_menu_save" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
